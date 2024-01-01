@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+   font-weight: var(--fw-light); 
+   line-height: 1.7;
+   color: var(--clr-gray-blue);
+}
+
+/* - Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%) */
+
+:root{
+
+    --fs-s:1rem;
+    --fs-m:1.25rem;
+    --fs-l : 1.625rem;
+    --fs-xl : 2.5rem;
+
+    --fw-light : 200;
+    --fw-medium : 400;
+    --fw-bold : 600;
+
+    --clr-dark-blue:hsl(234, 12%, 34%);
+    --clr-gray-blue:hsl(229, 6%, 66%);
+    --clr-light-gray:hsl(0, 0%, 98%);
+
+    --clr-teal:  hsl(180 , 58% , 56%);
+    --clr-red:   hsl(0 , 70% , 60%);
+    --clr-blue:hsl(212 , 75% , 62%);
+    --clr-yellow:hsl(34 , 89% , 65%);
+}
+
+body{
+    padding-block-end: 6rem;
+}
+
+h1,
+h2,
+h3{
+    color: var(--clr-dark-blue);
+    line-height: 1.2;
+}
+
+.wrapper{
+    padding-inline: 2rem;
+    margin-inline: auto;
+    max-width: 1100px;
+}
+
+.wrapper--narrow{
+    max-width: 550px;
+}
+
+header{
+    text-align: center;
+    margin-block: 6rem;
+}
+
+header > p{
+    font-size: var(--fs-m);
+}
+
+h1{
+    font-weight: var(--fw-light);
+    font-size: var(--fs-xl);
+}
+
+h1 span{
+    display: block;
+    font-weight: var(--fw-bold);
+}
+
+.flex-layout{
+    display: flex;
+    flex-wrap: wrap;
+    --gap: 2rem;
+    gap: var(--gap);
+
+}
+
+@media (max-width:800px) {
+    .flex-layout{
+        flex-direction: column;
+    }
+}
+
+.flex-layout > * {
+    flex: 1;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    justify-content: center;
+}
+
+.card{
+    --br:.325rem;
+    padding: 2rem;
+    border-top: var(--br) solid ;
+    border-radius: var(--br);
+    box-shadow:  0 1rem 1rem -0.5rem rgb(0 50 100 / 0.15);
+}
+
+.title{
+    font-size: var(--fs-l);
+    margin: 0;
+}
+
+.card__img{
+    display: block;
+    margin-left: auto;
+    margin-top: 2rem;
+
+}
+
+.border-top-teal{
+    border-color: var(--clr-teal);
+}
+
+.border-top-red{
+    border-color: var(--clr-red);
+}
+
+.border-top-blue{
+    border-color: var(--clr-blue);
+}
+
+.border-top-yellow{
+    border-color: var(--clr-yellow);
+}
